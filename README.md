@@ -54,9 +54,9 @@ title producer
 cd Desktop\kafka
 bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic streams-plaintext-input
 ```
-scrivere input nel terminale producer (ultimo terminale aperto)  
-aspettare che il consumer produca output o che wordcount dia output (penultimo terminale)  
-chiudere wordcount (ctrl+C)  (terzultimo terminale)
+scrivere input nel terminale `producer` (ultimo terminale aperto)  
+aspettare che il `consumer` produca output o che `wordcount` dia output (penultimo terminale)  
+chiudere `wordcount` (ctrl+C)  (terzultimo terminale)
 si possono verificare le scritture nel database H2  
 
 **ATTENZIONE:  
@@ -66,17 +66,17 @@ o dall'applicativo o dal browser, _ma non da entrambi contemporaneamente_**
 
 per aprire il DB aprire H2 Console  
 JDBC Url: jdbc:h2:~/wordCount  
-(il file sul vostro pc è C:\Users\<USERNAME>\wordCount.h2.db)  
+(il file sul vostro pc è `C:\Users\<USERNAME>\wordCount.h2.db`)  
 Nome utente: sa  
 password: nessuna password, lasciare il campo vuoto
 
 ## Esempio
-1. Nel terminale producer scriviamo la frase:
+1. Nel terminale `producer` scriviamo la frase:
 ```
 questo è un progetto di esempio
 ```
 2. Premiamo invio
-3. Nel terminale consumer dovremmo ricevere un output del genere
+3. Nel terminale `consumer` dovremmo ricevere un output del genere
 ```
 questo 1
 è 1
@@ -85,12 +85,12 @@ progetto 1
 di 1
 esempio 1
 ```
-4. Nel terminale producer scriviamo la frase
+4. Nel terminale `producer` scriviamo la frase
 ```
 progetto di esempio
 ```
 5. Premiamo invio
-6. Nel terminale consumer dovrebbe aggiungersi un output del genere
+6. Nel terminale `consumer` dovrebbe aggiungersi un output del genere
 ```
 progetto 2
 di 2
