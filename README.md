@@ -87,7 +87,7 @@ password: nessuna password, lasciare il campo vuoto
 ### Esempio
 1. Nel terminale `producer` scriviamo la frase:
 ```
-un progetto di esempio
+progetto di esempio
 ```
 2. Premiamo invio
 3. Nel terminale `consumer` dovremmo eventualmente ricevere (tempo di aggiornamento 30 secondi) un output del genere
