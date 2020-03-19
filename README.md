@@ -92,31 +92,23 @@ questo è un progetto di esempio
 2. Premiamo invio
 3. Nel terminale `consumer` dovremmo eventualmente ricevere (tempo di aggiornamento 30 secondi) un output del genere
 ```
-questo 1
-è 1
-un 1
 progetto 1
 di 1
 esempio 1
 ```
 4. Nel terminale `producer` scriviamo la frase
 ```
-progetto di esempio
+esempio
 ```
 5. Premiamo invio
 6. Nel terminale `consumer` dovrebbe aggiungersi un output del genere
 ```
-progetto 2
-di 2
 esempio 2
 ```
 7. Chiudere `wordcount` con control-c
 8. E nel database dovremmo avere questi valori (esplorare il database ad esempio con H2 Console)
 ```
-questo 1
-è 1
-un 1
-progetto 2
-di 2
+progetto 1
+di 1
 esempio 2
 ```
