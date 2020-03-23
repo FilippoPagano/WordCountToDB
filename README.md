@@ -1,4 +1,4 @@
-# Progetto di esempio Kafka e Database
+# Progetto di esempio Kafka, Avro e Database
 ## Cosa è
 Questo è un progetto di esempio Kafka. 
 ## Cosa è Kafka
@@ -6,7 +6,7 @@ Kafka serve per gestire code di messaggi all'interno di applicazioni.
 Le code sono chiamate topic, chi scrive su un topic è detto producer, chi legge da un topic è detto consumer.  
 ## Dettagli applicativo
 Questo progetto di esempio prende messaggi in ingresso sulla coda `streams-plaintext-input` da terminale.  
-L'applicativo di esempio legge da questa coda man mano che i messaggi arrivano, ogni messaggio viene spezzettato in parole, per ogni parola scrive nella coda `streams-wordcount-output` quante volte questa parola è già stata ricevuta e scrive sul database queste informazioni.
+L'applicativo di esempio legge da questa coda man mano che i messaggi arrivano, ogni messaggio viene spezzettato in parole, per ogni parola scrive un oggetto wordCount JSON codificato tramite Avro su `streams-wordcount-output-avro`, legge da quest'ultimo stream decodificando il JSON, scrive sul database le informazioni relative al wordCount e produce le stesse informazioni sullo stream `streams-wordcount-output`.
 ## Istruzioni
 ### Dipendenze
 Questo progetto è stato sviluppato per Windows.  
